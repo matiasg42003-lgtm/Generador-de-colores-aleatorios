@@ -1,6 +1,7 @@
 console.log("Funcionando..");
 
 const seleccion = document.getElementById("selectColor");
+const formato = document.getElementById("selectFormato");
 const contenedor = document.getElementById("contenedorColores");
 
 
@@ -37,7 +38,5 @@ const generarColorRGBA = () => {
 
     const colorFinalRGBA = `rgba(${r}, ${g}, ${b}, ${a})`;
     return colorFinalRGBA;
-
-
 
 }
