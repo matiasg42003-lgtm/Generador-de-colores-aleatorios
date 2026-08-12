@@ -19,9 +19,25 @@ generarPaleta();
 const generarColorHSL = () => {
 
     let tonoAlAzar = Math.floor(Math.random() * 361);
+    let saturacionAlAzar = Math.floor(Math.random() * 101);
+    let luminosidadAlAzar = Math.floor(Math.random() * 101);
 
-    let colorFinal = `hsl(${tonoAlAzar}, 80%, 50%)`;
-    return colorFinal;
+    const colorFinalHSL = `hsl(${tonoAlAzar}, ${saturacionAlAzar}, ${luminosidadAlAzar})`;
+
+    return colorFinalHSL;
 
 }
 
+const generarColorRGBA = () => {
+
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+    let a = Math.floor(Math.random() * 256);
+
+    const colorFinalRGBA = `rgba(${r}, ${g}, ${b}, ${a})`;
+    return colorFinalRGBA;
+
+
+
+}
