@@ -43,11 +43,30 @@ const generarPaleta = () => {
             divColor.innerText = color;
 
             contenedor.appendChild(divColor);
-
         };
+
+        copiarPaleta();
     })
 }
 
-generarPaleta();
+const copiarPaleta = () => {
+    const bolsaColores = contenedor.innerText;
+    navigator.clipboard.writeText(bolsaColores);
+    console.log("Copiado al portapapeles!");
 
+    const aviso = document.createElement("div");
+    aviso.className = "aviso-card";
+    aviso.innerText = ("Copiado al portapapeles!");
+
+
+    document.body.appendChild(aviso);
+
+    setTimeout(() => {
+        aviso.remove();
+
+    }, 1500);
+
+}
+
+generarPaleta();
 
