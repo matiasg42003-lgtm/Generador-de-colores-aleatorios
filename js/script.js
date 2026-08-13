@@ -37,12 +37,23 @@ const generarPaleta = () => {
         contenedor.innerHTML = "";
         for (let i = 0; i < seleccionElegida; i++) {
             const color = formatoElegido === "hsl" ? generarColorHSL() : generarColorRGBA();
-
             const divColor = document.createElement("div");
             divColor.className = "color-card";
             divColor.style.backgroundColor = color;
             divColor.innerText = color;
 
+            divColor.addEventListener("click", () => {
+                navigator.clipboard.writeText(divColor.innerText);
+
+                const avisoIndividual = document.createElement("div");
+                avisoIndividual.className = "avisoIndividual-card";
+                avisoIndividual.innerText = "Color Copied";
+                document.body.appendChild(avisoIndividual);
+
+                setTimeout(() => {
+                    avisoIndividual.remove();
+                }, 1500);
+            })
             contenedor.appendChild(divColor);
         };
     })
@@ -57,6 +68,7 @@ const copiarColores = () => {
             error.className = "error-card";
             error.innerText = "No hay paleta generada!"
             document.body.appendChild(error);
+
             setTimeout(() => {
                 error.remove();
             }, 1500);
@@ -80,4 +92,5 @@ const copiarColores = () => {
 
 generarPaleta();
 copiarColores();
+generarTodo.click();
 
