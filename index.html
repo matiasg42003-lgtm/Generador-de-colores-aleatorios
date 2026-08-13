@@ -22,21 +22,23 @@
     </header>
 
     <main>
+        <section id="controles">
+            <select name="selectColor" id="selectColor">
+                <option value="6">6 Colores</option>
+                <option value="8">8 Colores</option>
+                <option value="9">9 Colores</option>
+            </select>
 
-        <select name="selectColor" id="selectColor">
-            <option value="6">6 Colores</option>
-            <option value="8">8 Colores</option>
-            <option value="9">9 Colores</option>
-        </select>
+            <select name="selectFormato" id="selectFormato">
+                <option value="hsl">HSL</option>
+                <option value="rgba">RGBA</option>
+            </select>
 
-        <select name="selectFormato" id="selectFormato">
-            <option value="hsl">HSL</option>
-            <option value="rgba">RGBA</option>
-        </select>
+            <button id="generarPaleta">Generar paleta de colores</button>
 
-        <button id="generarPaleta">Generar paleta de colores</button>
+        </section>
 
-        <div id="contenedorColores"></div>
+        <section id="contenedorColores"></section>
 
         <button id="copiarPaleta">Copiar</button>
 
