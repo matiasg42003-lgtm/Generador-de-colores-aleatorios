@@ -90,6 +90,22 @@ body {
     align-items: center;
 }
 
+.error-card {
+    position: fixed;
+    height: 30px;
+    font-weight: 500;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+    padding: 20px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 h1 {
     font-size: 3rem;
     font-weight: 800;

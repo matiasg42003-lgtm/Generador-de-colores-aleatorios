@@ -57,8 +57,12 @@ const copiarColores = () => {
             error.className = "error-card";
             error.innerText = "No hay paleta generada!"
             document.body.appendChild(error);
+            setTimeout(() => {
+                error.remove();
+            }, 1500);
             return;
         }
+
 
         navigator.clipboard.writeText(textoCopiar);
 
