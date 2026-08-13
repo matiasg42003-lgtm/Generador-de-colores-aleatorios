@@ -13,7 +13,6 @@
 
 html,
 body {
-    height: 100%;
     font-family: var(--fuente-principal);
     background: linear-gradient(to top, grey, black);
     min-height: 100dvh;
@@ -81,7 +80,7 @@ body {
     font-size: 0.90rem;
     letter-spacing: 0.08rem;
     text-align: center;
-    transition: all 0.2s
+    transition: all 0.2s;
 }
 
 #generarPaleta:hover {
@@ -123,7 +122,25 @@ body {
     width: 100%;
 }
 
-.color-card {}
+.color-card {
+    width: 180px;
+    height: 300px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: var(--fuente-secundaria);
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+
+.color-card:hover {
+    transform: scale(1.05);
+}
 
 .aviso-card,
 .avisoIndividual-card {
@@ -167,13 +184,13 @@ p {
 
 footer {
     width: 100%;
-    margin-top: 40px;
+    margin-top: auto;
 }
 
 footer p {
     font-size: 0.9rem;
     color: var(--color-primario);
-    padding: 20px;
+    padding: 20px 40px;
     text-align: right;
     display: block;
 
