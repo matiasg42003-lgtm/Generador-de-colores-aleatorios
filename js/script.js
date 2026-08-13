@@ -62,20 +62,6 @@ const generarPaleta = () => {
 const copiarColores = () => {
     copiarElemento.addEventListener("click", () => {
         let textoCopiar = contenedor.innerText;
-
-        if (textoCopiar === "") {
-            const error = document.createElement("div");
-            error.className = "error-card";
-            error.innerText = "No hay paleta generada!"
-            document.body.appendChild(error);
-
-            setTimeout(() => {
-                error.remove();
-            }, 1500);
-            return;
-        }
-
-
         navigator.clipboard.writeText(textoCopiar);
 
         const aviso = document.createElement("div");
