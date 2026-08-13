@@ -52,19 +52,19 @@ const generarPaleta = () => {
 const copiarPaleta = () => {
     const bolsaColores = contenedor.innerText;
     navigator.clipboard.writeText(bolsaColores);
-    console.log("Copiado al portapapeles!");
+    console.log("Copied!");
 
     const aviso = document.createElement("div");
     aviso.className = "aviso-card";
-    aviso.innerText = ("Copiado al portapapeles!");
+    aviso.innerText = ("Copied!");
 
 
     document.body.appendChild(aviso);
 
-    setTimeout(() => {
-        aviso.remove();
+    //setTimeout(() => {
+    //  aviso.remove();
 
-    }, 1500);
+    //}, 1500);
 
 }
 
