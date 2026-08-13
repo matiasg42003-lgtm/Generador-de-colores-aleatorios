@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 0.5rem;
+    color: #ffffff;
+    filter: drop-shadow(0 0 1.5rem);
+    padding: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: inline-block;
+}
+
+p {
+    font-family: 'Inter',
+        sans-serif;
+    font-weight: 400;
+    display: inline-block;
+    color: #e1e4e7;
+    text-shadow: 3px 3px 3px rgba(39, 37, 37, 0.6);
+    opacity: 0.7;
+}
+
+body {
+    background: linear-gradient(to top, grey, black);
+    min-height: 100vh;
+
+}
+
+
+footer p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #ffffff;
+    text-align: right;
+    padding: 20px;
+    display: block;
+
+}
