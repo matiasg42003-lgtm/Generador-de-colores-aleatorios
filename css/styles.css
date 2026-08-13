@@ -23,6 +23,18 @@ body {
     align-items: center;
 }
 
+#controles {
+    background-color: #16161a;
+    border: 10px solid var(--color-secundario);
+    padding: 20px 40px;
+    border-radius: 20px;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 55px;
+
+
+}
+
 #selectColor {
     font-family: var(--fuente-secundaria);
     font-weight: 600;
