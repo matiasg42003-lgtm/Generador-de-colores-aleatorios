@@ -21,7 +21,6 @@ const generarColorRGBA = () => {
     let r = Math.floor(Math.random() * 256);
     let g = Math.floor(Math.random() * 256);
     let b = Math.floor(Math.random() * 256);
-    let a = Math.floor(Math.random() * 256);
 
     const colorFinalRGBA = `rgba(${r}, ${g}, ${b}, 1)`;
     return colorFinalRGBA;
@@ -33,7 +32,7 @@ const generarPaleta = () => {
         const seleccionElegida = Number(seleccion.value);
         const formatoElegido = (formato.value);
 
-        if (seleccionElegida === 0 || formatoElegido === "") return;
+        if (!seleccionElegida || formatoElegido === "") return;
         contenedor.innerHTML = "";
         for (let i = 0; i < seleccionElegida; i++) {
             const color = formatoElegido === "hsl" ? generarColorHSL() : generarColorRGBA();
