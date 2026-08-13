@@ -176,6 +176,7 @@ h1 {
 p {
     font-weight: 400;
     text-align: center;
+    margin-bottom: 20px;
     display: block;
     color: var(--color-primario);
     text-shadow: 3px 3px 3px rgba(39, 37, 37, 0.6);
@@ -194,4 +195,20 @@ footer p {
     text-align: right;
     display: block;
 
+}
+
+a {
+    font-family: var(--fuente-secundaria);
+    color: var(--color-primario);
+    text-decoration: underline;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.10rem;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+
+}
+
+a:hover {
+    opacity: 0.8;
 }
