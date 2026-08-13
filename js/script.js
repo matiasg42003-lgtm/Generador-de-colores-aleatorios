@@ -4,6 +4,7 @@ const seleccion = document.getElementById("selectColor");
 const formato = document.getElementById("selectFormato");
 const contenedor = document.getElementById("contenedorColores");
 const generarTodo = document.getElementById("generarPaleta");
+const copiarElemento = document.getElementById("copiarPaleta");
 
 const generarColorHSL = () => {
 
@@ -44,29 +45,35 @@ const generarPaleta = () => {
 
             contenedor.appendChild(divColor);
         };
-
-        copiarPaleta();
     })
 }
 
-const copiarPaleta = () => {
-    const bolsaColores = contenedor.innerText;
-    navigator.clipboard.writeText(bolsaColores);
-    console.log("Copied!");
+const copiarColores = () => {
+    copiarElemento.addEventListener("click", () => {
+        let textoCopiar = contenedor.innerText;
 
-    const aviso = document.createElement("div");
-    aviso.className = "aviso-card";
-    aviso.innerText = ("Copied!");
+        if (textoCopiar === "") {
+            const error = document.createElement("div");
+            error.className = "error-card";
+            error.innerText = "No hay paleta generada!"
+            document.body.appendChild(error);
+            return;
+        }
 
+        navigator.clipboard.writeText(textoCopiar);
 
-    document.body.appendChild(aviso);
+        const aviso = document.createElement("div");
+        aviso.className = "aviso-card";
+        aviso.innerText = "Copied";
+        document.body.appendChild(aviso);
 
-    //setTimeout(() => {
-    //  aviso.remove();
-
-    //}, 1500);
+        setTimeout(() => {
+            aviso.remove();
+        }, 1500);
+    })
 
 }
 
 generarPaleta();
+copiarColores();
 
