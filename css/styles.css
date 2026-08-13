@@ -7,13 +7,13 @@
 :root {
     --fuente-principal: 'Inter', sans-serif;
     --color-primario: #ffffff;
+    --color-secundario: #27272a;
 }
 
 html,
 body {
     height: 100%;
     font-family: var(--fuente-principal);
-    font-size: 15px;
     background: linear-gradient(to top, grey, black);
     min-height: 100dvh;
     display: flex;
@@ -21,6 +21,58 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
+#selectColor {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    width: 11rem;
+    height: 3.5rem;
+    border-radius: 50px;
+    background-color: var(--color-secundario);
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 0.85rem;
+    letter-spacing: 0.05rem;
+
+
+}
+
+#selectFormato {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    width: 11rem;
+    height: 3.5rem;
+    border-radius: 50px;
+    background-color: var(--color-secundario);
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 0.85rem;
+    letter-spacing: 0.05rem;
+}
+
+#generarPaleta {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    width: 14rem;
+    height: 3.8rem;
+    border-radius: 50px;
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+    text-transform: uppercase;
+    font-size: 0.90rem;
+    letter-spacing: 0.08rem;
+    text-align: center;
+
+
+}
+
+#contenedorColores {}
 
 h1 {
     font-size: 3rem;
