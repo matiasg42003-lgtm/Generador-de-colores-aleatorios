@@ -36,6 +36,11 @@ body {
     width: max-content;
 }
 
+#controles label {
+    font-family: var(--fuente-principal);
+    color: var(--color-primario);
+}
+
 #selectColor {
     font-family: var(--fuente-secundaria);
     font-weight: 600;
