@@ -5,29 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generador de colores</title>
+
+    <!-- FUENTES DE LETRAS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CONOS EXTERNOS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-
-
-
+    <!-- VINCULAMOS ARCHIVOS LOCALES (Estilos y Logica) -->
     <link rel="stylesheet" href="./css/styles.css">
-
     <script src="js/script.js" defer></script>
 </head>
 
 <body>
 
     <header>
+
+        <!-- ENCABEZADO PRINCIPAL -->
         <h1><i class="fa-solid fa-palette"></i> Colorfly Studio</h1>
         <p>Genera tu paleta de colores aleatorios</p>
 
     </header>
 
     <main>
+
+        <!-- INICIO CONTROLES DE SELECCION -->
         <section id="controles">
+
+            <!-- Seleccion de cantidad -->
             <label for="selectColor"><i class="fa-solid fa-layer-group"></i>
                 Cantidad de colores: </label>
             <select name="selectColor" id="selectColor">
@@ -36,6 +43,7 @@
                 <option value="9">9 Colores</option>
             </select>
 
+            <!-- Seleccion de formato -->
             <label for="selectFormato"><i class="fa-solid fa-sliders"></i>
                 Seleccionar Formato: </label>
             <select name="selectFormato" id="selectFormato">
@@ -43,30 +51,34 @@
                 <option value="rgba">RGBA</option>
             </select>
 
-            <button id="generarPaleta"><i class="fa-solid fa-bolt"></i>
-                Generar paleta de colores</button>
+            <!-- Accion: Generar colores -->
+            <button id="generarPaleta">Generar paleta de colores</button>
 
         </section>
+        <!-- FIN CONTROLES DE SELECCION -->
 
+
+        <!-- VISUALIZACION DE PALETA -->
         <section id="contenedorColores"></section>
 
+        <!-- ACCION: Copiar colores -->
         <button id="copiarPaleta">
             <i class="fa-solid fa-copy"></i>Copiar
         </button>
 
+        <!-- LINK VINCULADO A GITHUB -->
         <nav id="enlaces">
             <a href="https://github.com/matiasg42003-lgtm/Generador-de-colores-aleatorios" target="_blank"
-                rel="noopener"><i class="fa-brands fa-github"></i> GITHUB
+                rel="noopener"><i class="fa-brands fa-github"></i>GITHUB
             </a>
         </nav>
 
     </main>
 
     <footer>
+        <!-- PIE DE PAGINA -->
         <p>© 2026 Proyecto Colores - Creado por Matias Garcia</p>
     </footer>
-
-
 
 </body>
 

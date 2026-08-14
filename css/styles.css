@@ -1,3 +1,7 @@
+/* ==========================================================================
+   1. RESETEO Y VARIABLES GENERALES
+   ========================================================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +15,10 @@
     --color-secundario: #27272a;
 }
 
+/* ==========================================================================
+   2. ESTRUCTURA Y CUERPO (HTML - BODY)
+   ========================================================================== */
+
 html,
 body {
     font-family: var(--fuente-principal);
@@ -21,6 +29,38 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
+/* ==========================================================================
+   3. ENCABEZADO 
+   ========================================================================== */
+
+h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 0.5rem;
+    color: var(--color-primario);
+    filter: drop-shadow(0 0 1.5rem);
+    padding: 40px;
+    margin-top: 20px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px;
+    display: block;
+    color: var(--color-primario);
+    text-shadow: 3px 3px 3px rgba(39, 37, 37, 0.6);
+    opacity: 0.7;
+}
+
+/* ==========================================================================
+   4. PANEL DE CONTROLES (SELECTORES)
+   ========================================================================== */
 
 #controles {
     background-color: #16161a;
@@ -72,6 +112,10 @@ body {
     border: 3px solid white;
 }
 
+/* ==========================================================================
+   5. BOTONES DE ACCION
+   ========================================================================== */
+
 #generarPaleta {
     font-family: var(--fuente-secundaria);
     font-weight: 700;
@@ -122,6 +166,10 @@ body {
     opacity: 0.9;
 }
 
+/* ==========================================================================
+   6. CONTENEDOR Y TARJETA DE COLORES (GENERADOS)
+   ========================================================================== */
+
 #contenedorColores {
     display: flex;
     justify-content: center;
@@ -152,6 +200,10 @@ body {
     transform: scale(1.05);
 }
 
+/* ==========================================================================
+   7. AVISOS - NOTIFICACIONES
+   ========================================================================== */
+
 .aviso-card,
 .avisoIndividual-card {
     position: fixed;
@@ -170,43 +222,10 @@ body {
     align-items: center;
 }
 
-h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    letter-spacing: 0.5rem;
-    color: var(--color-primario);
-    filter: drop-shadow(0 0 1.5rem);
-    padding: 40px;
-    margin-top: 20px;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+/* ==========================================================================
+   8. ELEMENTOS COMPLEMENTARIOS (ICONOS, ENLACE Y PIE)
+   ========================================================================== */
 
-p {
-    font-weight: 400;
-    text-align: center;
-    margin-bottom: 20px;
-    display: block;
-    color: var(--color-primario);
-    text-shadow: 3px 3px 3px rgba(39, 37, 37, 0.6);
-    opacity: 0.7;
-}
-
-footer {
-    width: 100%;
-    margin-top: auto;
-}
-
-footer p {
-    font-size: 0.9rem;
-    color: var(--color-primario);
-    padding: 20px 40px;
-    text-align: right;
-    display: block;
-
-}
 
 a {
     font-family: var(--fuente-secundaria);
@@ -229,4 +248,18 @@ a:hover {
 i,
 .fa-solid {
     margin-right: 10px;
+}
+
+footer {
+    width: 100%;
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: var(--color-primario);
+    padding: 20px 40px;
+    text-align: right;
+    display: block;
+
 }
