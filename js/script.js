@@ -15,6 +15,7 @@ const controlesTotal = document.getElementById("controles");
    2. FUNCIONES MATEMATICAS (COLORES HSL/RGBA)
    ========================================================================== */
 
+//Generamos un color en formato HSL
 const generarColorHSL = () => {
 
     let tonoAlAzar = Math.floor(Math.random() * 361);
@@ -26,6 +27,7 @@ const generarColorHSL = () => {
     return colorFinalHSL;
 };
 
+//Generamos un color en formato RGBA
 const generarColorRGBA = () => {
 
     let r = Math.floor(Math.random() * 256);
@@ -41,6 +43,7 @@ const generarColorRGBA = () => {
    3. LOGICA CENTRAL (Creacion de la paleta)
    ========================================================================== */
 
+//Generamos la cantidad de colores seleccionados
 const generarPaleta = () => {
     const seleccionElegida = Number(seleccion.value);
     const formatoElegido = (formato.value);
@@ -83,9 +86,13 @@ generarTodo.addEventListener("click", generarPaleta);
    4. FUNCION COMPLEMENTARIA (Copiar paleta completa)
    ========================================================================== */
 
+//Copiamos todos los colores de la paletas
 const copiarColores = () => {
     copiarElemento.addEventListener("click", () => {
-        let textoCopiar = contenedor.innerText;
+
+        // Obtenemos los colores y los unimos en lineas separadas
+        const textoCopiar = [...contenedor.children].map(color => color.innerText).join("\n");
+
         navigator.clipboard.writeText(textoCopiar);
 
         const aviso = document.createElement("div");
@@ -102,6 +109,7 @@ const copiarColores = () => {
 /* ==========================================================================
    5. GESTION DE FOCO DEL USUARIO
    ========================================================================== */
+// Quitamos el foco de los controles despues de usarlos
 const quitarFoco = () => {
     controlesTotal.addEventListener("change", function () {
         document.activeElement.blur();
@@ -119,4 +127,5 @@ const quitarFoco = () => {
 generarPaleta();
 copiarColores();
 quitarFoco();
+
 
