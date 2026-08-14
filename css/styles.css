@@ -41,22 +41,10 @@ body {
     color: var(--color-primario);
 }
 
-#selectColor {
-    font-family: var(--fuente-secundaria);
-    font-weight: 600;
-    width: 11rem;
-    height: 3.5rem;
-    border-radius: 50px;
-    background-color: var(--color-secundario);
-    color: var(--color-primario);
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 0.85rem;
-    letter-spacing: 0.05rem;
-    border: none;
-}
-
+#selectColor,
 #selectFormato {
+    appearance: none;
+    -webkit-appearance: none;
     font-family: var(--fuente-secundaria);
     font-weight: 600;
     width: 11rem;
