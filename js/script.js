@@ -24,7 +24,7 @@ const generarColorHSL = () => {
     const colorFinalHSL = `hsl(${tonoAlAzar}, ${saturacionAlAzar}%, ${luminosidadAlAzar}%)`;
 
     return colorFinalHSL;
-}
+};
 
 const generarColorRGBA = () => {
 
@@ -35,7 +35,7 @@ const generarColorRGBA = () => {
     const colorFinalRGBA = `rgba(${r}, ${g}, ${b}, 1)`;
     return colorFinalRGBA;
 
-}
+};
 
 /* ==========================================================================
    3. LOGICA CENTRAL (Creacion de la paleta)
@@ -70,7 +70,7 @@ const generarPaleta = () => {
             setTimeout(() => {
                 avisoIndividual.remove();
             }, 1500);
-        })
+        });
         contenedor.appendChild(divColor);
     };
 };
@@ -96,9 +96,8 @@ const copiarColores = () => {
         setTimeout(() => {
             aviso.remove();
         }, 1500);
-    })
-
-}
+    });
+};
 
 /* ==========================================================================
    5. GESTION DE FOCO DEL USUARIO
@@ -106,8 +105,12 @@ const copiarColores = () => {
 const quitarFoco = () => {
     controlesTotal.addEventListener("change", function () {
         document.activeElement.blur();
-    })
-}
+    });
+
+    copiarElemento.addEventListener("click", function () {
+        document.activeElement.blur();
+    });
+};
 
 /* ==========================================================================
    6. INICILIAZION DE FUNCIONES
