@@ -8,6 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+
+
     <link rel="stylesheet" href="./css/styles.css">
 
     <script src="js/script.js" defer></script>
@@ -16,37 +21,43 @@
 <body>
 
     <header>
-        <h1>Colorfly Studio</h1>
+        <h1><i class="fa-solid fa-palette"></i> Colorfly Studio</h1>
         <p>Genera tu paleta de colores aleatorios</p>
 
     </header>
 
     <main>
         <section id="controles">
-            <label for="selectColor">Cantidad de colores: </label>
+            <label for="selectColor"><i class="fa-solid fa-layer-group"></i>
+                Cantidad de colores: </label>
             <select name="selectColor" id="selectColor">
                 <option value="6">6 Colores</option>
                 <option value="8">8 Colores</option>
                 <option value="9">9 Colores</option>
             </select>
 
-            <label for="selectFormato">Seleccionar Formato: </label>
+            <label for="selectFormato"><i class="fa-solid fa-sliders"></i>
+                Seleccionar Formato: </label>
             <select name="selectFormato" id="selectFormato">
                 <option value="hsl">HSL</option>
                 <option value="rgba">RGBA</option>
             </select>
 
-            <button id="generarPaleta">Generar paleta de colores</button>
+            <button id="generarPaleta"><i class="fa-solid fa-bolt"></i>
+                Generar paleta de colores</button>
 
         </section>
 
         <section id="contenedorColores"></section>
 
-        <button id="copiarPaleta">Copiar</button>
+        <button id="copiarPaleta">
+            <i class="fa-solid fa-copy"></i>Copiar
+        </button>
 
         <nav id="enlaces">
             <a href="https://github.com/matiasg42003-lgtm/Generador-de-colores-aleatorios" target="_blank"
-                rel="noopener">GITHUB</a>
+                rel="noopener"><i class="fa-brands fa-github"></i> GITHUB
+            </a>
         </nav>
 
     </main>
