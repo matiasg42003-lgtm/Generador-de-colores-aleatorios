@@ -1,11 +1,19 @@
 console.log("Funcionando..");
 
+/* ==========================================================================
+   1. DEFINICION DE VARIABLES
+   ========================================================================== */
+
 const seleccion = document.getElementById("selectColor");
 const formato = document.getElementById("selectFormato");
 const contenedor = document.getElementById("contenedorColores");
 const generarTodo = document.getElementById("generarPaleta");
 const copiarElemento = document.getElementById("copiarPaleta");
 const controlesTotal = document.getElementById("controles");
+
+/* ==========================================================================
+   2. FUNCIONES MATEMATICAS (COLORES HSL/RGBA)
+   ========================================================================== */
 
 const generarColorHSL = () => {
 
@@ -29,36 +37,51 @@ const generarColorRGBA = () => {
 
 }
 
+/* ==========================================================================
+   3. LOGICA CENTRAL (Creacion de la paleta)
+   ========================================================================== */
+
 const generarPaleta = () => {
-    generarTodo.addEventListener("click", () => {
-        const seleccionElegida = Number(seleccion.value);
-        const formatoElegido = (formato.value);
+    const seleccionElegida = Number(seleccion.value);
+    const formatoElegido = (formato.value);
 
-        if (!seleccionElegida || formatoElegido === "") return;
-        contenedor.innerHTML = "";
-        for (let i = 0; i < seleccionElegida; i++) {
-            const color = formatoElegido === "hsl" ? generarColorHSL() : generarColorRGBA();
-            const divColor = document.createElement("div");
-            divColor.className = "color-card";
-            divColor.style.backgroundColor = color;
-            divColor.innerText = color;
+    if (!seleccionElegida || formatoElegido === "") return;
 
-            divColor.addEventListener("click", () => {
-                navigator.clipboard.writeText(divColor.innerText);
+    contenedor.innerHTML = ""; // limpiamos la paleta anterior
 
-                const avisoIndividual = document.createElement("div");
-                avisoIndividual.className = "avisoIndividual-card";
-                avisoIndividual.innerText = "Color Copied";
-                document.body.appendChild(avisoIndividual);
+    for (let i = 0; i < seleccionElegida; i++) {
+        const color = formatoElegido === "hsl" ? generarColorHSL() : generarColorRGBA();
 
-                setTimeout(() => {
-                    avisoIndividual.remove();
-                }, 1500);
-            })
-            contenedor.appendChild(divColor);
-        };
-    })
-}
+        //Creamos la tarjeta de color
+        const divColor = document.createElement("div");
+        divColor.className = "color-card";
+        divColor.style.backgroundColor = color;
+        divColor.innerText = color;
+
+        // Evento para copiar color de forma individual
+        divColor.addEventListener("click", () => {
+            navigator.clipboard.writeText(divColor.innerText);
+
+            const avisoIndividual = document.createElement("div");
+            avisoIndividual.className = "avisoIndividual-card";
+            avisoIndividual.innerText = "Color Copied";
+            document.body.appendChild(avisoIndividual);
+
+            setTimeout(() => {
+                avisoIndividual.remove();
+            }, 1500);
+        })
+        contenedor.appendChild(divColor);
+    };
+};
+
+// Boton para generar la paleta
+generarTodo.addEventListener("click", generarPaleta);
+
+
+/* ==========================================================================
+   4. FUNCION COMPLEMENTARIA (Copiar paleta completa)
+   ========================================================================== */
 
 const copiarColores = () => {
     copiarElemento.addEventListener("click", () => {
@@ -77,14 +100,20 @@ const copiarColores = () => {
 
 }
 
+/* ==========================================================================
+   5. GESTION DE FOCO DEL USUARIO
+   ========================================================================== */
 const quitarFoco = () => {
     controlesTotal.addEventListener("change", function () {
         document.activeElement.blur();
     })
 }
 
+/* ==========================================================================
+   6. INICILIAZION DE FUNCIONES
+   ========================================================================== */
+
 generarPaleta();
 copiarColores();
-generarTodo.click();
 quitarFoco();
 
