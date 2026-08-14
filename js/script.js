@@ -5,6 +5,7 @@ const formato = document.getElementById("selectFormato");
 const contenedor = document.getElementById("contenedorColores");
 const generarTodo = document.getElementById("generarPaleta");
 const copiarElemento = document.getElementById("copiarPaleta");
+const controlesTotal = document.getElementById("controles");
 
 const generarColorHSL = () => {
 
@@ -76,7 +77,14 @@ const copiarColores = () => {
 
 }
 
+const quitarFoco = () => {
+    controlesTotal.addEventListener("change", function () {
+        document.activeElement.blur();
+    })
+}
+
 generarPaleta();
 copiarColores();
 generarTodo.click();
+quitarFoco();
 
