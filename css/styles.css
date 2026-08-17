@@ -27,7 +27,10 @@
    2. ESTRUCTURA Y CUERPO (HTML - BODY)
    ========================================================================== */
 
-html,
+html {
+    min-height: 100%;
+}
+
 body {
     font-family: var(--fuente-principal);
     background-color: var(--color-fondo);
@@ -49,7 +52,7 @@ h1 {
     font-weight: 800;
     letter-spacing: 0.5rem;
     color: var(--color-texto);
-    filter: drop-shadow(0 0 1.5rem);
+    filter: drop-shadow(0 0 1.5rem rgba (139, 124, 246, 0.4));
     padding: 40px;
     margin-top: 20px;
     margin-bottom: 1rem;
@@ -254,7 +257,7 @@ a {
 }
 
 a:hover {
-    opacity: 0.8;
+    opacity: 1;
 }
 
 i,
@@ -276,7 +279,7 @@ footer p {
 }
 
 /* ==========================================================================
-9. DISEÑO RESPONSIVE
+9. DISEÑO RESPONSIVE (TABLET Y CELULAR)
 ========================================================================== */
 
 @media (max-width: 992px) {
@@ -348,10 +351,5 @@ footer p {
         padding: 15px;
         text-align: center;
     }
-
-
-
-
-
 
 }
