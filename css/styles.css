@@ -222,7 +222,7 @@ p {
 .aviso-card,
 .avisoIndividual-card {
     position: fixed;
-    bottom: 10px;
+    bottom: 40px;
     height: 30px;
     font-weight: 500;
     font-size: 0.8rem;
@@ -344,6 +344,11 @@ footer p {
         height: 3.5rem;
         margin-top: 20px;
         margin-bottom: 40px;
+    }
+
+    .aviso-card,
+    .avisoIndividual-card {
+        bottom: 350px;
     }
 
     footer p {
