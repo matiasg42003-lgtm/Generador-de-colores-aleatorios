@@ -1,4 +1,3 @@
-console.log("Funcionando..");
 
 /* ==========================================================================
    1. DEFINICION DE VARIABLES
@@ -67,7 +66,7 @@ const generarPaleta = () => {
 
             const avisoIndividual = document.createElement("div");
             avisoIndividual.className = "avisoIndividual-card";
-            avisoIndividual.innerText = "Color Copied";
+            avisoIndividual.innerText = "Color Copiado!";
             document.body.appendChild(avisoIndividual);
 
             setTimeout(() => {
@@ -97,7 +96,7 @@ const copiarColores = () => {
 
         const aviso = document.createElement("div");
         aviso.className = "aviso-card";
-        aviso.innerText = "Copied";
+        aviso.innerText = "Paleta copiada!";
         document.body.appendChild(aviso);
 
         setTimeout(() => {
@@ -121,7 +120,7 @@ const quitarFoco = () => {
 };
 
 /* ==========================================================================
-   6. INICILIAZION DE FUNCIONES
+   6. INICIALIZACION DE FUNCIONES
    ========================================================================== */
 
 generarPaleta();

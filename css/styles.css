@@ -46,13 +46,13 @@ body {
    3. ENCABEZADO 
    ========================================================================== */
 
-h1 {
+.titulo {
     font-family: var(--fuente-secundaria);
     font-size: 3rem;
     font-weight: 800;
     letter-spacing: 0.5rem;
     color: var(--color-texto);
-    filter: drop-shadow(0 0 1.5rem rgba (139, 124, 246, 0.4));
+    filter: drop-shadow(0 0 1.5rem rgba(139, 124, 246, 0.4));
     padding: 40px;
     margin-top: 20px;
     margin-bottom: 1rem;
@@ -61,7 +61,7 @@ h1 {
     justify-content: center;
 }
 
-p {
+.subtitulo {
     font-weight: 400;
     text-align: center;
     margin-bottom: 20px;
@@ -144,6 +144,7 @@ p {
     letter-spacing: 0.08rem;
     text-align: center;
     transition: all 0.2s;
+    box-shadow: 0 4px 15px rgba(139, 124, 246, 0.35);
 }
 
 #generarPaleta:hover {
@@ -189,7 +190,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 14px;
     width: 100%;
 }
 
@@ -289,7 +290,7 @@ footer p {
         gap: 20px;
     }
 
-    h1 {
+    .titulo {
         font-size: 2rem;
         letter-spacing: 0.2rem;
         padding: 10px;
@@ -297,7 +298,7 @@ footer p {
         margin-bottom: 0.5rem;
     }
 
-    p {
+    .subtitulo {
         font-size: 0.8rem;
         margin-bottom: 15px;
         padding: 0 10px;
